@@ -25,7 +25,7 @@ struct Saal_TaskApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ItemListView()
         }
         .modelContainer(sharedModelContainer)
     }
