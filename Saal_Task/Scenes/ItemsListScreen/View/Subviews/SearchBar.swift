@@ -1,5 +1,5 @@
 //
-//  SearchBarView.swift
+//  SearchBar.swift
 //  Saal_Task
 //
 //  Created by belal medhat on 17/04/2024.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct SearchBarView: View {
+struct SearchBar: View {
     @Binding var text: String
-    @State var showClearButton: Bool = false
+    @State private var showClearButton: Bool = false
     
     var body: some View {
         HStack {
@@ -40,5 +40,5 @@ struct SearchBarView: View {
 }
 
 #Preview {
-    SearchBarView(text: .constant("Search"))
+    SearchBar(text: .constant("Search"))
 }

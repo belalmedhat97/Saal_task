@@ -12,7 +12,9 @@
 		577FF95B2BCFCD5B00075010 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FF95A2BCFCD5B00075010 /* Item.swift */; };
 		577FF95D2BCFCD5D00075010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577FF95C2BCFCD5D00075010 /* Assets.xcassets */; };
 		577FF9602BCFCD5D00075010 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577FF95F2BCFCD5D00075010 /* Preview Assets.xcassets */; };
-		577FF96A2BCFD1D100075010 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FF9692BCFD1D100075010 /* SearchBarView.swift */; };
+		577FF96A2BCFD1D100075010 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FF9692BCFD1D100075010 /* SearchBar.swift */; };
+		577FF96E2BCFDA5B00075010 /* FloatingAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FF96D2BCFDA5B00075010 /* FloatingAddButton.swift */; };
+		577FF9712BCFE16F00075010 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FF9702BCFE16F00075010 /* ListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,7 +24,9 @@
 		577FF95A2BCFCD5B00075010 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		577FF95C2BCFCD5D00075010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		577FF95F2BCFCD5D00075010 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		577FF9692BCFD1D100075010 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		577FF9692BCFD1D100075010 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		577FF96D2BCFDA5B00075010 /* FloatingAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingAddButton.swift; sourceTree = "<group>"; };
+		577FF9702BCFE16F00075010 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,25 +88,35 @@
 			isa = PBXGroup;
 			children = (
 				577FF96B2BCFD6D300075010 /* ItemsListScreen */,
-				577FF9682BCFD1B000075010 /* SearchBar */,
 			);
 			path = Scenes;
-			sourceTree = "<group>";
-		};
-		577FF9682BCFD1B000075010 /* SearchBar */ = {
-			isa = PBXGroup;
-			children = (
-				577FF9692BCFD1D100075010 /* SearchBarView.swift */,
-			);
-			path = SearchBar;
 			sourceTree = "<group>";
 		};
 		577FF96B2BCFD6D300075010 /* ItemsListScreen */ = {
 			isa = PBXGroup;
 			children = (
-				577FF9582BCFCD5B00075010 /* ItemListScreen.swift */,
+				577FF96C2BCFD89100075010 /* View */,
 			);
 			path = ItemsListScreen;
+			sourceTree = "<group>";
+		};
+		577FF96C2BCFD89100075010 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				577FF9582BCFCD5B00075010 /* ItemListScreen.swift */,
+				577FF96F2BCFDF6D00075010 /* Subviews */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		577FF96F2BCFDF6D00075010 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				577FF96D2BCFDA5B00075010 /* FloatingAddButton.swift */,
+				577FF9692BCFD1D100075010 /* SearchBar.swift */,
+				577FF9702BCFE16F00075010 /* ListCell.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,10 +189,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				577FF96A2BCFD1D100075010 /* SearchBarView.swift in Sources */,
+				577FF96A2BCFD1D100075010 /* SearchBar.swift in Sources */,
 				577FF9592BCFCD5B00075010 /* ItemListScreen.swift in Sources */,
 				577FF95B2BCFCD5B00075010 /* Item.swift in Sources */,
+				577FF9712BCFE16F00075010 /* ListCell.swift in Sources */,
 				577FF9572BCFCD5B00075010 /* Saal_TaskApp.swift in Sources */,
+				577FF96E2BCFDA5B00075010 /* FloatingAddButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
