@@ -10,13 +10,16 @@ import SwiftData
 
 @Model
 final class Item {
+    var id = UUID()
     var name: String
     var type: String
-    var object_description: String
-    
-    init(name: String, type: String, object_description: String) {
+    var objectDescription: String
+    var creationDate: Date
+    init(name: String, type: String, itemDescription: String, creationDate: Date) {
+        self.id = UUID()
         self.name = name
         self.type = type
-        self.object_description = object_description
+        self.objectDescription = itemDescription
+        self.creationDate = creationDate
     }
 }

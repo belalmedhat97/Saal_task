@@ -10,23 +10,20 @@ import SwiftData
 
 @main
 struct Saal_TaskApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+    let modelContainer: ModelContainer
+
+    init() {
 
         do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
+            modelContainer = try ModelContainer(for: Item.self)
+            modelContainer.mainContext.autosaveEnabled = false
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            fatalError("Could not initialize ModelContainer")
         }
-    }()
-
+    }
     var body: some Scene {
         WindowGroup {
-            ItemListView()
-        }
-        .modelContainer(sharedModelContainer)
+            ItemListView(viewModel: ItemListViewModel(dataManagerService: SwiftDataManager()))
+        }.modelContainer(modelContainer)
     }
 }

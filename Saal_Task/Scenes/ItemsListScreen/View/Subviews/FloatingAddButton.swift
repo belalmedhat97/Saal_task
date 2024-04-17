@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FloatingAddButton: View {
-    var onAddButtonTap: () -> Void
+    var onAddTap: () -> Void
 
     var body: some View {
         ZStack {
@@ -17,7 +17,7 @@ struct FloatingAddButton: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        self.onAddButtonTap()
+                        self.onAddTap()
                     }) {
                         Image(systemName: "plus")
                             .font(.title)
@@ -35,5 +35,5 @@ struct FloatingAddButton: View {
 }
 
 #Preview {
-    FloatingAddButton(onAddButtonTap: {})
+    FloatingAddButton(onAddTap: {})
 }

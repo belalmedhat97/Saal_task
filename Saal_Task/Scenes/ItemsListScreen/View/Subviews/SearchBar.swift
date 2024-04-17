@@ -10,6 +10,7 @@ import SwiftUI
 struct SearchBar: View {
     @Binding var text: String
     @State private var showClearButton: Bool = false
+    var onStartSearch: (_ text: String) -> Void
     
     var body: some View {
         HStack {
@@ -22,6 +23,7 @@ struct SearchBar: View {
                 .padding(.vertical, 4)
                 .onChange(of: text) { _, newValue in
                     (showClearButton = newValue != "" ? true : false)
+                    onStartSearch(newValue)
                 }
             
             if showClearButton {
@@ -40,5 +42,5 @@ struct SearchBar: View {
 }
 
 #Preview {
-    SearchBar(text: .constant("Search"))
+    SearchBar(text: .constant("Search"), onStartSearch: {_ in})
 }
