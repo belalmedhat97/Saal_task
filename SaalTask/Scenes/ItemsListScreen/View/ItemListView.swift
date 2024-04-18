@@ -53,6 +53,10 @@ struct ItemListView<VM>: View where VM: ItemListViewModelProtocols {
                     ItemDetailsView(viewModel: ItemDetailsViewModel(dataManagerService: SwiftDataManager()), item: selectedItem)
                 }
         }.alert(viewModel.vmError.txt, isPresented: $viewModel.vmError.show) {
+            Button("OK", role: .cancel) {
+                viewModel.vmError.show = false
+                viewModel.vmError.txt = ""
+            }
         }
     }
 }
