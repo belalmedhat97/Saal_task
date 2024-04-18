@@ -61,6 +61,11 @@ struct ItemDetailsView<VM>: View where VM: ItemDetailsViewModelProtocols {
             .navigationTitle("Edit Objects")
             .background(Color(UIColor.lightGray)).navigationDestination(for: SubRelatedItem.self) { selectedItem in
                 RelationItemView(item: selectedItem)
+            }.alert(viewModel.vmError.txt, isPresented: $viewModel.vmError.show) {
+                Button("OK", role: .cancel) {
+                    viewModel.vmError.show = false
+                    viewModel.vmError.txt = ""
+                }
             }
     }
 }

@@ -27,6 +27,7 @@ class ItemListViewModel: ItemListViewModelProtocols {
         self.fetchItems()
     }
     func createObject(_ item: Item) {
+        guard validateTextInputOfItem(item: item) else { return }
         do {
             try dataManagerService?.createItem(item)
             fetchItems()
@@ -56,5 +57,11 @@ class ItemListViewModel: ItemListViewModelProtocols {
             vmError = (true, error.localizedDescription)
         }
     }
-
-}
+    private func validateTextInputOfItem(item: Item) -> Bool {
+        guard item.name != "", item.type != "", item.objectDescription.description != "" else {
+             vmError = (true, "all fields must be filled")
+            return false
+        }
+        return true
+        }
+    }

@@ -52,6 +52,7 @@ struct ItemListView<VM>: View where VM: ItemListViewModelProtocols {
                 .navigationTitle("Objects").navigationDestination(for: Item.self) { selectedItem in
                     ItemDetailsView(viewModel: ItemDetailsViewModel(dataManagerService: SwiftDataManager()), item: selectedItem)
                 }
+        }.alert(viewModel.vmError.txt, isPresented: $viewModel.vmError.show) {
         }
     }
 }

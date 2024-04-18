@@ -215,22 +215,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C87684E2-0462-4F87-94CB-1897FB0EF60D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SaalTask/Scenes/ItemDetailsScreen/View/Subviews/ItemsListSheet.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1ECB05CE-BDE4-4312-A208-6AC0730CE703"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -273,6 +257,22 @@
             startingLineNumber = "36"
             endingLineNumber = "36"
             landmarkName = "deleteItem(_:itemInRelation:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C247B646-9ADF-40D9-91B6-CF7C8C595F9D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SaalTask/Scenes/ItemDetailsScreen/ViewModel/ItemDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "updateItem(oldItem:with:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

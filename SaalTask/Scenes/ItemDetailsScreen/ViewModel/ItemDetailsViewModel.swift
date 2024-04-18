@@ -47,7 +47,7 @@ class ItemDetailsViewModel: ItemDetailsViewModelProtocols {
                                                  objectDescription: subItem.objectDescription,
                                                  creationDate: subItem.creationDate))
         }
-        itemToBeUpdated.subItem = arrayOfRelated
+        itemToBeUpdated.subItem?.append(contentsOf: arrayOfRelated)
     }
 
 }
