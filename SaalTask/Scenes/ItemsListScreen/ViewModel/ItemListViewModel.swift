@@ -13,7 +13,6 @@ protocol ItemListViewModelProtocols: ObservableObject {
     var vmError: (show: Bool, txt: String) {get set}
     func createObject(_ item: Item)
     func deleteItem(_ item: Item)
-    func updateItem(oldItem: Item, newItem: Item)
     func searchItem(_ name: String)
     func fetchItems()
 }
@@ -37,7 +36,7 @@ class ItemListViewModel: ItemListViewModelProtocols {
     }
     func fetchItems() {
         do {
-            listOfItems = try dataManagerService?.fetchItem()
+            listOfItems = try dataManagerService?.fetchItems()
         } catch {
             vmError = (true, error.localizedDescription)
         }
@@ -45,14 +44,6 @@ class ItemListViewModel: ItemListViewModelProtocols {
     func deleteItem(_ item: Item) {
         do {
             try dataManagerService?.deleteItem(item)
-            fetchItems()
-        } catch {
-            vmError = (true, error.localizedDescription)
-        }
-    }
-    func updateItem(oldItem: Item, newItem: Item) {
-        do {
-            try dataManagerService?.updateItem(oldItem: oldItem, newItem: newItem)
             fetchItems()
         } catch {
             vmError = (true, error.localizedDescription)

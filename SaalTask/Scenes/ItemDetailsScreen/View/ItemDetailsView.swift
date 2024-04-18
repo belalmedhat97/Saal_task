@@ -9,7 +9,7 @@ import SwiftUI
 struct ItemDetailsView<VM>: View where VM: ItemDetailsViewModelProtocols {
     @StateObject var viewModel: VM
     @State private var showInputField: Bool = false
-    @State var item: Item = Item(name: "", type: "", itemDescription: "", creationDate: Date.now)
+    @State var item: Item = Item(name: "", type: "", objectDescription: "", creationDate: Date.now)
     @EnvironmentObject var navState: NavigatorAppState
     var body: some View {
         ZStack {
@@ -26,7 +26,7 @@ struct ItemDetailsView<VM>: View where VM: ItemDetailsViewModelProtocols {
                     }, label: {
                         ItemCell(item: Item(name: item.name,
                                             type: item.type,
-                                            itemDescription: item.objectDescription,
+                                            objectDescription: item.objectDescription,
                                             creationDate: item.creationDate),
                                  onEditTap: {
                             navState.path.append(item)
@@ -45,7 +45,7 @@ struct ItemDetailsView<VM>: View where VM: ItemDetailsViewModelProtocols {
                         .font(.headline)
                         .presentationDetents([.large])
                         .presentationDragIndicator(.visible)
-                    ItemsListSheet(items: viewModel.listOfRelationItems ?? [],
+                    ItemsListSheet(items: viewModel.listOfItems ?? [],
                                    isShown: $showInputField) { items in
                         viewModel.updateItem(oldItem: item, with: Array(items))
                     } onCancelTap: {

@@ -42,6 +42,6 @@ struct ItemCellSelection: View {
 #Preview {
     ItemCellSelection(item: Item(name: "Saal",
                                 type: "ART",
-                                itemDescription: "test project",
+                                objectDescription: "test project",
                                  creationDate: Date.now), selection: .constant([]))
 }

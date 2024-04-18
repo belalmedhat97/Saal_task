@@ -32,7 +32,7 @@ struct ItemsListSheet: View {
             }.padding(20).background(Color(UIColor.lightGray)).clipShape(RoundedRectangle(cornerRadius: 20)).padding()
         }
         private func resetTextFields() {
-            items = [Item(name: "", type: "", itemDescription: "", creationDate: Date.now)]
+            items = [Item(name: "", type: "", objectDescription: "", creationDate: Date.now)]
         }
 }
 

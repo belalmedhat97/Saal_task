@@ -36,12 +36,12 @@ struct ItemSheet: View {
     }
     private func resetTextFields() {
         isShown.toggle()
-        newItemData = Item(name: "", type: "", itemDescription: "", creationDate: Date.now)
+        newItemData = Item(name: "", type: "", objectDescription: "", creationDate: Date.now)
     }
 }
 
 #Preview {
-    ItemSheet(newItemData: .constant(Item(name: "", type: "", itemDescription: "", creationDate: Date.now)),
+    ItemSheet(newItemData: .constant(Item(name: "", type: "", objectDescription: "", creationDate: Date.now)),
               isShown: .constant(true),
               onSaveTap: {},
               onCancelTap: {})

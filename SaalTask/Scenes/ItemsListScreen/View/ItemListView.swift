@@ -11,7 +11,7 @@ struct ItemListView<VM>: View where VM: ItemListViewModelProtocols {
     @State private var searchText: String = ""
     @State private var showInputField: Bool = false
     @State private var isEditing: Bool = false
-    @State private var newItem: Item = Item(name: "", type: "", itemDescription: "", creationDate: Date.now)
+    @State private var newItem: Item = Item(name: "", type: "", objectDescription: "", creationDate: Date.now)
     @EnvironmentObject var navState: NavigatorAppState
     var body: some View {
         NavigationStack(path: $navState.path) {

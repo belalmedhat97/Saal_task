@@ -7,7 +7,7 @@
 
 import SwiftUI
 struct RelationItemView: View {
-    @State var item: SubRelatedItem = SubRelatedItem(name: "", type: "", itemDescription: "", creationDate: Date.now)
+    @State var item: SubRelatedItem = SubRelatedItem(name: "", type: "", objectDescription: "", creationDate: Date.now)
     @State private var path = NavigationPath()
     var body: some View {
         ZStack {

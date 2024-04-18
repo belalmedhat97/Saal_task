@@ -14,11 +14,11 @@ import SwiftData
     var objectDescription: String
     var creationDate: Date
     var item: Item?
-    init(name: String, type: String, itemDescription: String, creationDate: Date) {
+    init(name: String, type: String, objectDescription: String, creationDate: Date) {
         self.id = UUID()
         self.name = name
         self.type = type
-        self.objectDescription = itemDescription
+        self.objectDescription = objectDescription
         self.creationDate = creationDate
     }
 }

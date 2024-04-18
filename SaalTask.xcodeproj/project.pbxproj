@@ -26,7 +26,22 @@
 		57F2EFAC2BD133AF00A4115B /* RelationItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2EFAB2BD133AF00A4115B /* RelationItemView.swift */; };
 		57F2EFB02BD139A900A4115B /* NavigationStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2EFAF2BD139A900A4115B /* NavigationStackManager.swift */; };
 		57F2EFB62BD1484900A4115B /* SubRelatedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2EFB52BD1484900A4115B /* SubRelatedItem.swift */; };
+		57F2EFC72BD14B1E00A4115B /* SwiftDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2EFC52BD14B1E00A4115B /* SwiftDataManagerTests.swift */; };
+		57F2EFCA2BD15D3000A4115B /* ItemStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2EFC92BD15D3000A4115B /* ItemStubs.swift */; };
+		57F2EFCE2BD1609800A4115B /* ItemListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2EFCD2BD1609800A4115B /* ItemListViewModelTests.swift */; };
+		57F2EFD12BD1756400A4115B /* MockDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2EFD02BD1756400A4115B /* MockDataManager.swift */; };
+		57F2EFD32BD1761B00A4115B /* ItemDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57F2EFD22BD1761B00A4115B /* ItemDetailsViewModelTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57F2EFBF2BD14A4E00A4115B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 577FF94B2BCFCD5B00075010 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 577FF9522BCFCD5B00075010;
+			remoteInfo = SaalTask;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		577FF9532BCFCD5B00075010 /* SaalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,10 +64,23 @@
 		57F2EFAB2BD133AF00A4115B /* RelationItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelationItemView.swift; sourceTree = "<group>"; };
 		57F2EFAF2BD139A900A4115B /* NavigationStackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackManager.swift; sourceTree = "<group>"; };
 		57F2EFB52BD1484900A4115B /* SubRelatedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubRelatedItem.swift; sourceTree = "<group>"; };
+		57F2EFBB2BD14A4E00A4115B /* SaalTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaalTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		57F2EFC52BD14B1E00A4115B /* SwiftDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataManagerTests.swift; sourceTree = "<group>"; };
+		57F2EFC92BD15D3000A4115B /* ItemStubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStubs.swift; sourceTree = "<group>"; };
+		57F2EFCD2BD1609800A4115B /* ItemListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListViewModelTests.swift; sourceTree = "<group>"; };
+		57F2EFD02BD1756400A4115B /* MockDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataManager.swift; sourceTree = "<group>"; };
+		57F2EFD22BD1761B00A4115B /* ItemDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		577FF9502BCFCD5B00075010 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57F2EFB82BD14A4E00A4115B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -66,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				577FF9552BCFCD5B00075010 /* SaalTask */,
+				57F2EFBC2BD14A4E00A4115B /* SaalTaskTests */,
 				577FF9542BCFCD5B00075010 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				577FF9532BCFCD5B00075010 /* SaalTask.app */,
+				57F2EFBB2BD14A4E00A4115B /* SaalTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -240,6 +270,50 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		57F2EFBC2BD14A4E00A4115B /* SaalTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				57F2EFCF2BD1754E00A4115B /* Mock */,
+				57F2EFC42BD14A5600A4115B /* SwiftDataManagerTests */,
+				57F2EFCC2BD15FFF00A4115B /* ViewModelTests */,
+			);
+			path = SaalTaskTests;
+			sourceTree = "<group>";
+		};
+		57F2EFC42BD14A5600A4115B /* SwiftDataManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				57F2EFC52BD14B1E00A4115B /* SwiftDataManagerTests.swift */,
+			);
+			path = SwiftDataManagerTests;
+			sourceTree = "<group>";
+		};
+		57F2EFC82BD15BCF00A4115B /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				57F2EFC92BD15D3000A4115B /* ItemStubs.swift */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		57F2EFCC2BD15FFF00A4115B /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				57F2EFCD2BD1609800A4115B /* ItemListViewModelTests.swift */,
+				57F2EFD22BD1761B00A4115B /* ItemDetailsViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		57F2EFCF2BD1754E00A4115B /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				57F2EFD02BD1756400A4115B /* MockDataManager.swift */,
+				57F2EFC82BD15BCF00A4115B /* Stubs */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,6 +335,24 @@
 			productReference = 577FF9532BCFCD5B00075010 /* SaalTask.app */;
 			productType = "com.apple.product-type.application";
 		};
+		57F2EFBA2BD14A4E00A4115B /* SaalTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57F2EFC12BD14A4E00A4115B /* Build configuration list for PBXNativeTarget "SaalTaskTests" */;
+			buildPhases = (
+				57F2EFB72BD14A4E00A4115B /* Sources */,
+				57F2EFB82BD14A4E00A4115B /* Frameworks */,
+				57F2EFB92BD14A4E00A4115B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57F2EFC02BD14A4E00A4115B /* PBXTargetDependency */,
+			);
+			name = SaalTaskTests;
+			productName = SaalTaskTests;
+			productReference = 57F2EFBB2BD14A4E00A4115B /* SaalTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -273,6 +365,10 @@
 				TargetAttributes = {
 					577FF9522BCFCD5B00075010 = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					57F2EFBA2BD14A4E00A4115B = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = 577FF9522BCFCD5B00075010;
 					};
 				};
 			};
@@ -290,6 +386,7 @@
 			projectRoot = "";
 			targets = (
 				577FF9522BCFCD5B00075010 /* SaalTask */,
+				57F2EFBA2BD14A4E00A4115B /* SaalTaskTests */,
 			);
 		};
 /* End PBXProject section */
@@ -301,6 +398,13 @@
 			files = (
 				577FF9602BCFCD5D00075010 /* Preview Assets.xcassets in Resources */,
 				577FF95D2BCFCD5D00075010 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57F2EFB92BD14A4E00A4115B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +457,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		57F2EFB72BD14A4E00A4115B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57F2EFD32BD1761B00A4115B /* ItemDetailsViewModelTests.swift in Sources */,
+				57F2EFCE2BD1609800A4115B /* ItemListViewModelTests.swift in Sources */,
+				57F2EFD12BD1756400A4115B /* MockDataManager.swift in Sources */,
+				57F2EFCA2BD15D3000A4115B /* ItemStubs.swift in Sources */,
+				57F2EFC72BD14B1E00A4115B /* SwiftDataManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57F2EFC02BD14A4E00A4115B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 577FF9522BCFCD5B00075010 /* SaalTask */;
+			targetProxy = 57F2EFBF2BD14A4E00A4115B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		577FF9612BCFCD5D00075010 /* Debug */ = {
@@ -535,6 +659,42 @@
 			};
 			name = Release;
 		};
+		57F2EFC22BD14A4E00A4115B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9Q79MB7M4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.isconfig.SaalTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SaalTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SaalTask";
+			};
+			name = Debug;
+		};
+		57F2EFC32BD14A4E00A4115B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G9Q79MB7M4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.isconfig.SaalTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SaalTask.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SaalTask";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -552,6 +712,15 @@
 			buildConfigurations = (
 				577FF9642BCFCD5D00075010 /* Debug */,
 				577FF9652BCFCD5D00075010 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57F2EFC12BD14A4E00A4115B /* Build configuration list for PBXNativeTarget "SaalTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57F2EFC22BD14A4E00A4115B /* Debug */,
+				57F2EFC32BD14A4E00A4115B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

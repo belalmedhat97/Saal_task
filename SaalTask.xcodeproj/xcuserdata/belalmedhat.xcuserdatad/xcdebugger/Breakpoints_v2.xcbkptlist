@@ -231,15 +231,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2842F317-7675-4843-B874-6399F240DB1E"
+            uuid = "1ECB05CE-BDE4-4312-A208-6AC0730CE703"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SaalTaskTests/SwiftDataManagerTest/SwiftDataManagerTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "testDeleteItem()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4D4E8C87-FFC1-46EC-9D37-EE9B57658D5C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../var/folders/fp/dmthbhy505x03m6vf4w896kw0000gn/T/swift-generated-sources/@__swiftmacro_8SaalTask20ItemDetailsViewModelC06deleteC0_14itemInRelationyAA0C0C_AA010SubRelatedC0CtF9PredicatefMf_.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7"
+            endingLineNumber = "7"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "84411DF8-903D-4031-BB0F-749378EA159D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SaalTask/Scenes/ItemDetailsScreen/ViewModel/ItemDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "deleteItem(_:itemInRelation:)"
             landmarkType = "7">
          </BreakpointContent>

@@ -10,7 +10,7 @@ import SwiftData
 
 protocol DataManagerProtocol {
     func createItem(_ item: Item) throws
-    func fetchItem() throws -> [Item]?
+    func fetchItems() throws -> [Item]?
     func updateItem(oldItem: Item, newItem: Item) throws
     func deleteItem(_ item: Item) throws
     func searchItem(with: String) throws -> [Item]?
@@ -18,11 +18,11 @@ protocol DataManagerProtocol {
 class SwiftDataManager: DataManagerProtocol {
     var container: ModelContainer?
     var context: ModelContext?
-    init() {
+    init(inMemoryContainer: ModelContainer? = nil) {
         do {
             container = try ModelContainer(for: Item.self)
             if let container {
-                context = ModelContext(container)
+                context = ModelContext(inMemoryContainer ?? container)
             }
         } catch {
             print(error)
@@ -34,7 +34,7 @@ class SwiftDataManager: DataManagerProtocol {
             try save()
         }
     }
-    func fetchItem() throws -> [Item]? {
+    func fetchItems() throws -> [Item]? {
         let fetchDescriptor = FetchDescriptor<Item>(sortBy: [SortDescriptor<Item>(\.creationDate)])
         if let context {
             do {

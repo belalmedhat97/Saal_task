@@ -47,6 +47,6 @@ struct ItemCell: View {
 #Preview {
     ItemCell(item: Item(name: "Saal",
                         type: "ART",
-                        itemDescription: "test project",
+                        objectDescription: "test project",
                         creationDate: Date.now), onEditTap: {}, onDeleteTap: {})
 }

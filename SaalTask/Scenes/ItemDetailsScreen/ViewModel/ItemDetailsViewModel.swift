@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftData
 protocol ItemDetailsViewModelProtocols: ObservableObject {
     var dataManagerService: DataManagerProtocol? {get set}
-    var listOfRelationItems: [Item]? {get}
+    var listOfItems: [Item]? {get}
     var vmError: (show: Bool, txt: String) {get set}
     func deleteItem(_ items: Item, itemInRelation: SubRelatedItem)
     func updateItem(oldItem: Item, with: [Item])
@@ -16,8 +17,9 @@ protocol ItemDetailsViewModelProtocols: ObservableObject {
 }
 class ItemDetailsViewModel: ItemDetailsViewModelProtocols {
     var dataManagerService: DataManagerProtocol?
-    @Published var listOfRelationItems: [Item]? = []
+    @Published var listOfItems: [Item]? = []
     @Published var vmError: (show: Bool, txt: String) = (false, "")
+    private var dataToBeAllocated = [SubRelatedItem]()
 
     init(dataManagerService: DataManagerProtocol) {
         self.dataManagerService = dataManagerService
@@ -25,7 +27,7 @@ class ItemDetailsViewModel: ItemDetailsViewModelProtocols {
     }
     func fetchItems() {
         do {
-            listOfRelationItems = try dataManagerService?.fetchItem()
+            listOfItems = try dataManagerService?.fetchItems()
         } catch {
             vmError = (true, error.localizedDescription)
         }
@@ -42,7 +44,7 @@ class ItemDetailsViewModel: ItemDetailsViewModelProtocols {
         for subItem in with {
         arrayOfRelated.append(SubRelatedItem(name: subItem.name,
                                                  type: subItem.type,
-                                                 itemDescription: subItem.objectDescription,
+                                                 objectDescription: subItem.objectDescription,
                                                  creationDate: subItem.creationDate))
         }
         itemToBeUpdated.subItem = arrayOfRelated

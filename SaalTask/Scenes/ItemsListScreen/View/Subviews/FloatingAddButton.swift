@@ -16,13 +16,11 @@ struct FloatingAddButton: View {
                 Spacer()
                 HStack {
                     Spacer()
-                    Button(action: {
-                        self.onAddTap()
-                    }) {
+                    Button(action: {self.onAddTap()}, label: {
                         Image(systemName: "plus")
                             .font(.title)
                             .foregroundColor(.white)
-                    }
+                    })
                     .frame(width: 50, height: 50)
                     .background(Color.blue)
                     .clipShape(Circle())
