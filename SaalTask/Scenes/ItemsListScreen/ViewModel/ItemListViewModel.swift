@@ -1,6 +1,6 @@
 //
 //  ItemListViewModel.swift
-//  Saal_Task
+//  SaalTask
 //
 //  Created by belal medhat on 17/04/2024.
 //
@@ -9,9 +9,9 @@ import Foundation
 
 protocol ItemListViewModelProtocols: ObservableObject {
     var dataManagerService: DataManagerProtocol? {get set}
-    var listOfItems:[Item]? {get}
-    var vmError:(show:Bool,txt:String) {get set}
-    func createObject(_ item:Item)
+    var listOfItems: [Item]? {get}
+    var vmError: (show: Bool, txt: String) {get set}
+    func createObject(_ item: Item)
     func deleteItem(_ item: Item)
     func updateItem(oldItem: Item, newItem: Item)
     func searchItem(_ name: String)
@@ -21,13 +21,13 @@ protocol ItemListViewModelProtocols: ObservableObject {
 class ItemListViewModel: ItemListViewModelProtocols {
     var dataManagerService: DataManagerProtocol?
     @Published var listOfItems: [Item]? = []
-    @Published var vmError:(show:Bool,txt:String) = (false, "")
+    @Published var vmError: (show: Bool, txt: String) = (false, "")
 
     init(dataManagerService: DataManagerProtocol) {
         self.dataManagerService = dataManagerService
         self.fetchItems()
     }
-    func createObject(_ item:Item) {
+    func createObject(_ item: Item) {
         do {
             try dataManagerService?.createItem(item)
             fetchItems()

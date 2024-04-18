@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		577FF9572BCFCD5B00075010 /* Saal_TaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FF9562BCFCD5B00075010 /* Saal_TaskApp.swift */; };
+		577FF9572BCFCD5B00075010 /* SaalTaskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FF9562BCFCD5B00075010 /* SaalTaskApp.swift */; };
 		577FF9592BCFCD5B00075010 /* ItemListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FF9582BCFCD5B00075010 /* ItemListScreen.swift */; };
 		577FF95B2BCFCD5B00075010 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 577FF95A2BCFCD5B00075010 /* Item.swift */; };
 		577FF95D2BCFCD5D00075010 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 577FF95C2BCFCD5D00075010 /* Assets.xcassets */; };
@@ -21,8 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		577FF9532BCFCD5B00075010 /* Saal_Task.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Saal_Task.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		577FF9562BCFCD5B00075010 /* Saal_TaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saal_TaskApp.swift; sourceTree = "<group>"; };
+		577FF9532BCFCD5B00075010 /* SaalTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaalTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		577FF9562BCFCD5B00075010 /* SaalTaskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaalTaskApp.swift; sourceTree = "<group>"; };
 		577FF9582BCFCD5B00075010 /* ItemListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListScreen.swift; sourceTree = "<group>"; };
 		577FF95A2BCFCD5B00075010 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		577FF95C2BCFCD5D00075010 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,7 +49,7 @@
 		577FF94A2BCFCD5B00075010 = {
 			isa = PBXGroup;
 			children = (
-				577FF9552BCFCD5B00075010 /* Saal_Task */,
+				577FF9552BCFCD5B00075010 /* SaalTask */,
 				577FF9542BCFCD5B00075010 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,12 +57,12 @@
 		577FF9542BCFCD5B00075010 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				577FF9532BCFCD5B00075010 /* Saal_Task.app */,
+				577FF9532BCFCD5B00075010 /* SaalTask.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		577FF9552BCFCD5B00075010 /* Saal_Task */ = {
+		577FF9552BCFCD5B00075010 /* SaalTask */ = {
 			isa = PBXGroup;
 			children = (
 				577FF9752BCFEB9A00075010 /* Services */,
@@ -72,7 +72,7 @@
 				577FF95C2BCFCD5D00075010 /* Assets.xcassets */,
 				577FF95E2BCFCD5D00075010 /* Preview Content */,
 			);
-			path = Saal_Task;
+			path = SaalTask;
 			sourceTree = "<group>";
 		};
 		577FF95E2BCFCD5D00075010 /* Preview Content */ = {
@@ -86,7 +86,7 @@
 		577FF9662BCFCF1D00075010 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				577FF9562BCFCD5B00075010 /* Saal_TaskApp.swift */,
+				577FF9562BCFCD5B00075010 /* SaalTaskApp.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -147,9 +147,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		577FF9522BCFCD5B00075010 /* Saal_Task */ = {
+		577FF9522BCFCD5B00075010 /* SaalTask */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 577FF9632BCFCD5D00075010 /* Build configuration list for PBXNativeTarget "Saal_Task" */;
+			buildConfigurationList = 577FF9632BCFCD5D00075010 /* Build configuration list for PBXNativeTarget "SaalTask" */;
 			buildPhases = (
 				577FF94F2BCFCD5B00075010 /* Sources */,
 				577FF9502BCFCD5B00075010 /* Frameworks */,
@@ -160,9 +160,9 @@
 			);
 			dependencies = (
 			);
-			name = Saal_Task;
+			name = SaalTask;
 			productName = Saal_Task;
-			productReference = 577FF9532BCFCD5B00075010 /* Saal_Task.app */;
+			productReference = 577FF9532BCFCD5B00075010 /* SaalTask.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -193,7 +193,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				577FF9522BCFCD5B00075010 /* Saal_Task */,
+				577FF9522BCFCD5B00075010 /* SaalTask */,
 			);
 		};
 /* End PBXProject section */
@@ -242,7 +242,7 @@
 				577FF9592BCFCD5B00075010 /* ItemListScreen.swift in Sources */,
 				577FF95B2BCFCD5B00075010 /* Item.swift in Sources */,
 				577FF9712BCFE16F00075010 /* ItemCell.swift in Sources */,
-				577FF9572BCFCD5B00075010 /* Saal_TaskApp.swift in Sources */,
+				577FF9572BCFCD5B00075010 /* SaalTaskApp.swift in Sources */,
 				577FF9792BD0016200075010 /* SwiftDataManager.swift in Sources */,
 				577FF9742BCFEB5F00075010 /* ItemListViewModel.swift in Sources */,
 				577FF96E2BCFDA5B00075010 /* FloatingAddButton.swift in Sources */,
@@ -378,7 +378,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Saal_Task/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SaalTask/Preview Content\"";
 				DEVELOPMENT_TEAM = G9Q79MB7M4;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -393,7 +393,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.isconfig.Saal-Task";
+				PRODUCT_BUNDLE_IDENTIFIER = com.isconfig.SaalTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -408,7 +408,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Saal_Task/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SaalTask/Preview Content\"";
 				DEVELOPMENT_TEAM = G9Q79MB7M4;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
@@ -423,7 +423,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.isconfig.Saal-Task";
+				PRODUCT_BUNDLE_IDENTIFIER = com.isconfig.SaalTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -443,7 +443,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		577FF9632BCFCD5D00075010 /* Build configuration list for PBXNativeTarget "Saal_Task" */ = {
+		577FF9632BCFCD5D00075010 /* Build configuration list for PBXNativeTarget "SaalTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				577FF9642BCFCD5D00075010 /* Debug */,

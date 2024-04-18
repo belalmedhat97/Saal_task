@@ -1,6 +1,6 @@
 //
 //  ItemCell.swift
-//  Saal_Task
+//  SaalTask
 //
 //  Created by belal medhat on 17/04/2024.
 //
@@ -20,7 +20,6 @@ struct ItemCell: View {
                     Text(item.name)
                         .font(.subheadline)
                 })
-                
                 Text(item.objectDescription)
                     .font(.subheadline)
                     .foregroundColor(.gray)
@@ -32,13 +31,13 @@ struct ItemCell: View {
             Menu {
                 Button(action: {
                     onEditTap()
-                }){
+                }) {
                     Text("Edit")
                     Image(systemName: "pencil")
                 }
                 Button(action: {
                     onDeleteTap()
-                }){
+                }) {
                     Text("Delete")
                     Image(systemName: "trash")
                 }
@@ -52,5 +51,8 @@ struct ItemCell: View {
 }
 
 #Preview {
-    ItemCell(item: Item(name: "Saal", type: "WallART", itemDescription: "WallART for test project", creationDate: Date.now), onEditTap: {}, onDeleteTap: {})
+    ItemCell(item: Item(name: "Saal", 
+                        type: "WallART",
+                        itemDescription: "WallART for test project",
+                        creationDate: Date.now), onEditTap: {}, onDeleteTap: {})
 }

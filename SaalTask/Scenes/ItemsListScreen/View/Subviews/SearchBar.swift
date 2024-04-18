@@ -1,6 +1,6 @@
 //
 //  SearchBar.swift
-//  Saal_Task
+//  SaalTask
 //
 //  Created by belal medhat on 17/04/2024.
 //
@@ -11,7 +11,6 @@ struct SearchBar: View {
     @Binding var text: String
     @State private var showClearButton: Bool = false
     var onStartSearch: (_ text: String) -> Void
-    
     var body: some View {
         HStack {
             TextField("Search", text: $text)
@@ -25,11 +24,13 @@ struct SearchBar: View {
                     (showClearButton = newValue != "" ? true : false)
                     onStartSearch(newValue)
                 }
-            
             if showClearButton {
                 Button(action: {
                     self.text = ""
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
+                                                    to: nil,
+                                                    from: nil,
+                                                    for: nil)
                 }) {
                     Image(systemName: "xmark.circle.fill")
                         .foregroundColor(.red)

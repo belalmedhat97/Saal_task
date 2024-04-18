@@ -1,6 +1,6 @@
 //
-//  Saal_TaskApp.swift
-//  Saal_Task
+//  SaalTaskApp.swift
+//  SaalTask
 //
 //  Created by belal medhat on 17/04/2024.
 //
@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct Saal_TaskApp: App {
+struct SaalTaskApp: App {
     let modelContainer: ModelContainer
 
     init() {
