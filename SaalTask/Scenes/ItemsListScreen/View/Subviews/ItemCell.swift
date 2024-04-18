@@ -29,18 +29,12 @@ struct ItemCell: View {
             }
             Spacer()
             Menu {
-                Button(action: {
-                    onEditTap()
-                }) {
+                Button(action: { onEditTap() }, label: {
                     Text("Edit")
-                    Image(systemName: "pencil")
-                }
-                Button(action: {
-                    onDeleteTap()
-                }) {
+                    Image(systemName: "pencil") })
+                Button(action: { onDeleteTap() }, label: {
                     Text("Delete")
-                    Image(systemName: "trash")
-                }
+                    Image(systemName: "trash") })
             } label: {
                 Image(systemName: "ellipsis.circle.fill")
                     .foregroundColor(.blue)
@@ -51,8 +45,8 @@ struct ItemCell: View {
 }
 
 #Preview {
-    ItemCell(item: Item(name: "Saal", 
-                        type: "WallART",
-                        itemDescription: "WallART for test project",
+    ItemCell(item: Item(name: "Saal",
+                        type: "ART",
+                        itemDescription: "test project",
                         creationDate: Date.now), onEditTap: {}, onDeleteTap: {})
 }

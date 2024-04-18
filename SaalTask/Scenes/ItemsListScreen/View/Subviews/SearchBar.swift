@@ -31,11 +31,8 @@ struct SearchBar: View {
                                                     to: nil,
                                                     from: nil,
                                                     for: nil)
-                }) {
-                    Image(systemName: "xmark.circle.fill")
-                        .foregroundColor(.red)
-                        .padding(.trailing, 8)
-                }
+                }, label: { Image(systemName: "xmark.circle.fill").foregroundColor(.red).padding(.trailing, 8) })
+
             }
 
         }

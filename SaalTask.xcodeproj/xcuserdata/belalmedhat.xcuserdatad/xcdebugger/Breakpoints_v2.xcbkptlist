@@ -215,16 +215,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DD976318-A044-4FED-9AFF-95F0852BFC38"
+            uuid = "C87684E2-0462-4F87-94CB-1897FB0EF60D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SaalTask/Scenes/ItemsListScreen/ViewModel/ItemListViewModel.swift"
+            filePath = "SaalTask/Scenes/ItemDetailsScreen/View/Subviews/ItemsListSheet.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "init(dataManagerService:)"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2842F317-7675-4843-B874-6399F240DB1E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SaalTask/Scenes/ItemDetailsScreen/ViewModel/ItemDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "deleteItem(_:itemInRelation:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

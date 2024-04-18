@@ -6,17 +6,10 @@
 //
 
 import SwiftUI
-
-enum ItemSheetType {
-    case edit
-    case create
-}
-
 struct ItemSheet: View {
     @Binding var newItemData: Item
     @Binding var isShown: Bool
-    @Binding var inEditMode: Bool
-    var onButtonTap: (_ withType: ItemSheetType) -> Void
+    var onSaveTap: () -> Void
     var onCancelTap: () -> Void
     var body: some View {
         VStack {
@@ -30,19 +23,19 @@ struct ItemSheet: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             HStack(spacing: 20) {
-                Button(inEditMode == true ? "EDIT" : "SAVE") {
-                    isShown.toggle()
-                    onButtonTap(inEditMode == true ? .edit : .create)
+                Button("SAVE") {
+                    onSaveTap()
+                    resetTextFields()
                 }.padding(10).background(Color.black).clipShape(RoundedRectangle(cornerRadius: 10))
                 Button("CANCEL") {
-                    resetTextFields()
-                    isShown.toggle()
                     onCancelTap()
+                    resetTextFields()
                 }.padding(10).background(Color.black).clipShape(RoundedRectangle(cornerRadius: 10))
             }
         }.padding(20).background(Color(UIColor.lightGray)).clipShape(RoundedRectangle(cornerRadius: 20)).padding()
     }
     private func resetTextFields() {
+        isShown.toggle()
         newItemData = Item(name: "", type: "", itemDescription: "", creationDate: Date.now)
     }
 }
@@ -50,7 +43,6 @@ struct ItemSheet: View {
 #Preview {
     ItemSheet(newItemData: .constant(Item(name: "", type: "", itemDescription: "", creationDate: Date.now)),
               isShown: .constant(true),
-              inEditMode: .constant(false),
-              onButtonTap: {_ in },
+              onSaveTap: {},
               onCancelTap: {})
 }

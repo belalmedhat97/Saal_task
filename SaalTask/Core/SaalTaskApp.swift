@@ -11,7 +11,6 @@ import SwiftData
 @main
 struct SaalTaskApp: App {
     let modelContainer: ModelContainer
-
     init() {
 
         do {
@@ -23,7 +22,7 @@ struct SaalTaskApp: App {
     }
     var body: some Scene {
         WindowGroup {
-            ItemListView(viewModel: ItemListViewModel(dataManagerService: SwiftDataManager()))
+            ItemListView(viewModel: ItemListViewModel(dataManagerService: SwiftDataManager())).environmentObject(NavigatorAppState())
         }.modelContainer(modelContainer)
     }
 }
