@@ -1,16 +1,16 @@
 //
-//  SearchBarView.swift
-//  Saal_Task
+//  SearchBar.swift
+//  SaalTask
 //
 //  Created by belal medhat on 17/04/2024.
 //
 
 import SwiftUI
 
-struct SearchBarView: View {
+struct SearchBar: View {
     @Binding var text: String
-    @State var showClearButton: Bool = false
-    
+    @State private var showClearButton: Bool = false
+    var onStartSearch: (_ text: String) -> Void
     var body: some View {
         HStack {
             TextField("Search", text: $text)
@@ -22,17 +22,17 @@ struct SearchBarView: View {
                 .padding(.vertical, 4)
                 .onChange(of: text) { _, newValue in
                     (showClearButton = newValue != "" ? true : false)
+                    onStartSearch(newValue)
                 }
-            
             if showClearButton {
                 Button(action: {
                     self.text = ""
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                }) {
-                    Image(systemName: "xmark.circle.fill")
-                        .foregroundColor(.red)
-                        .padding(.trailing, 8)
-                }
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder),
+                                                    to: nil,
+                                                    from: nil,
+                                                    for: nil)
+                }, label: { Image(systemName: "xmark.circle.fill").foregroundColor(.red).padding(.trailing, 8) })
+
             }
 
         }
@@ -40,5 +40,5 @@ struct SearchBarView: View {
 }
 
 #Preview {
-    SearchBarView(text: .constant("Search"))
+    SearchBar(text: .constant("Search"), onStartSearch: {_ in})
 }
