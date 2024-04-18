@@ -60,7 +60,7 @@ struct ItemDetailsView<VM>: View where VM: ItemDetailsViewModelProtocols {
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Edit Objects")
             .background(Color(UIColor.lightGray)).navigationDestination(for: SubRelatedItem.self) { selectedItem in
-                EditRelationItemView(item: selectedItem)
+                RelationItemView(item: selectedItem)
             }
     }
 }

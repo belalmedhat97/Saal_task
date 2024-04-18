@@ -1,12 +1,12 @@
 //
-//  EditRelationItemView.swift
+//  RelationItemView.swift
 //  SaalTask
 //
 //  Created by belal medhat on 18/04/2024.
 //
 
 import SwiftUI
-struct EditRelationItemView: View {
+struct RelationItemView: View {
     @State var item: SubRelatedItem = SubRelatedItem(name: "", type: "", itemDescription: "", creationDate: Date.now)
     @State private var path = NavigationPath()
     var body: some View {
@@ -25,5 +25,5 @@ struct EditRelationItemView: View {
 }
 
 #Preview {
-    EditRelationItemView()
+    RelationItemView()
 }
