@@ -50,7 +50,7 @@ struct ItemListView<VM>: View where VM: ItemListViewModelProtocols {
                 }
             }.navigationBarTitleDisplayMode(.inline)
                 .navigationTitle("Objects").navigationDestination(for: Item.self) { selectedItem in
-                    ItemDetailsView(viewModel: ItemDetailsViewModel(dataManagerService: SwiftDataManager()), item: selectedItem)
+                    ItemDetailsView(viewModel: ItemDetailsViewModel(dataManagerService: SwiftDataManager(), selectedItem: selectedItem), item: selectedItem)
                 }
         }.alert(viewModel.vmError.txt, isPresented: $viewModel.vmError.show) {
             Button("OK", role: .cancel) {

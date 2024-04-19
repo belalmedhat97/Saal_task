@@ -17,17 +17,19 @@ protocol ItemDetailsViewModelProtocols: ObservableObject {
 }
 class ItemDetailsViewModel: ItemDetailsViewModelProtocols {
     var dataManagerService: DataManagerProtocol?
+    var selectedItem: Item?
     @Published var listOfItems: [Item]? = []
     @Published var vmError: (show: Bool, txt: String) = (false, "")
     private var dataToBeAllocated = [SubRelatedItem]()
 
-    init(dataManagerService: DataManagerProtocol) {
+    init(dataManagerService: DataManagerProtocol, selectedItem: Item? = nil) {
         self.dataManagerService = dataManagerService
+        self.selectedItem = selectedItem
         self.fetchItems()
     }
     func fetchItems() {
         do {
-            listOfItems = try dataManagerService?.fetchItems()
+            listOfItems = try dataManagerService?.fetchItems()?.filter({ $0.name != selectedItem?.name })
         } catch {
             vmError = (true, error.localizedDescription)
         }

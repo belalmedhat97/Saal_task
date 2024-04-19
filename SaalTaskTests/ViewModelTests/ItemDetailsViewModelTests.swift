@@ -39,7 +39,7 @@ final class ItemDetailsViewModelTests: XCTestCase {
             XCTAssertEqual(viewModel?.listOfItems?.count, 10)
             XCTAssertEqual(viewModel?.vmError.show, true)
         }
-        @MainActor func testDeleteItem_Success() {
+        func testDeleteItem_Success() {
 //            // Given
 //            let superItem = (viewModel?.listOfItems?[3])!
 //            let itemInRelationToDeleted = SubRelatedItem(name: "SubItem 2",
