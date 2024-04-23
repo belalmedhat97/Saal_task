@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ItemCellSelection: View {
     var item: Item
-//    var onSelectTap: (_ item: Item) -> Void
     @Binding var selection: Set<Item>
     @State private var isSelected: Bool = false
     var body: some View {

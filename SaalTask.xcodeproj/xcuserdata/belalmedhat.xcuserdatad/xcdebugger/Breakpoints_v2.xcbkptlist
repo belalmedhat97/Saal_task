@@ -247,7 +247,23 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "84411DF8-903D-4031-BB0F-749378EA159D"
+            uuid = "FEAA4E5F-D3AB-4D61-A25B-8D55A80C7A8C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SaalTask/Scenes/ItemDetailsScreen/View/Subviews/ItemsListSheet.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6EC290D9-C135-44DE-8667-C5708CA33E7D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -256,24 +272,114 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
             endingLineNumber = "38"
-            landmarkName = "deleteItem(_:itemInRelation:)"
+            landmarkName = "fetchItems()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C247B646-9ADF-40D9-91B6-CF7C8C595F9D"
+            uuid = "8A16AB0B-5654-469E-A16D-A7AADE998F91"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SaalTask/Scenes/ItemDetailsScreen/ViewModel/ItemDetailsViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "updateItem(oldItem:with:)"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "deleteItem(itemInRelation:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8A16AB0B-5654-469E-A16D-A7AADE998F91 - e3be7b60dc12626b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SaalTask.ItemDetailsViewModel.deleteItem(itemInRelation: SaalTask.SubRelatedItem) -&gt; ()"
+                  moduleName = "SaalTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/SaalTask/SaalTask/Scenes/ItemDetailsScreen/ViewModel/ItemDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51">
+               </Location>
+               <Location
+                  uuid = "8A16AB0B-5654-469E-A16D-A7AADE998F91 - c7350aa519b19ccb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SaalTask.SubRelatedItem) -&gt; Swift.Bool in SaalTask.ItemDetailsViewModel.deleteItem(itemInRelation: SaalTask.SubRelatedItem) -&gt; ()"
+                  moduleName = "SaalTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/SaalTask/SaalTask/Scenes/ItemDetailsScreen/ViewModel/ItemDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D36658EF-0291-4370-96E1-287771110750"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SaalTaskTests/Mock/MockDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "updateItem(oldItem:newItem:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D36658EF-0291-4370-96E1-287771110750 - b61382aabc2c0a88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SaalTaskTests.MockDataManager.updateItem(oldItem: SaalTask.Item, newItem: SaalTask.Item) throws -&gt; ()"
+                  moduleName = "SaalTaskTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/SaalTask/SaalTaskTests/Mock/MockDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38">
+               </Location>
+               <Location
+                  uuid = "D36658EF-0291-4370-96E1-287771110750 - b61382aabc2c0a88"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SaalTaskTests.MockDataManager.updateItem(oldItem: SaalTask.Item, newItem: SaalTask.Item) throws -&gt; ()"
+                  moduleName = "SaalTaskTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/SaalTask/SaalTaskTests/Mock/MockDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38">
+               </Location>
+               <Location
+                  uuid = "D36658EF-0291-4370-96E1-287771110750 - 5ad436bbc98f8839"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (SaalTask.Item) -&gt; Swift.Bool in SaalTaskTests.MockDataManager.updateItem(oldItem: SaalTask.Item, newItem: SaalTask.Item) throws -&gt; ()"
+                  moduleName = "SaalTaskTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/belalmedhat/Movies/SaalTask/SaalTaskTests/Mock/MockDataManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

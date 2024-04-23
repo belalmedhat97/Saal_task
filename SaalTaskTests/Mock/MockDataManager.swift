@@ -32,6 +32,13 @@ class MockDataManager: DataManagerProtocol {
     }
     func updateItem(oldItem: Item, newItem: Item) throws {
         // Implement if needed
+        if shouldThrowError {
+             throw NSError(domain: "", code: 0, userInfo: nil)
+        } else {
+            if let index = itemsToReturn?.firstIndex(where: {$0.name == newItem.name}) {
+                itemsToReturn?[index] = newItem
+            }
+        }
     }
     func fetchItems() throws -> [Item]? {
         if shouldThrowError {

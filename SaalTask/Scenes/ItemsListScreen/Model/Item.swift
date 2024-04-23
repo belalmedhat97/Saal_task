@@ -10,14 +10,14 @@ import SwiftData
 
 @Model
 final class Item {
-    var id = UUID()
+    var id: UUID
     var name: String
     var type: String
     var objectDescription: String
     var creationDate: Date
     @Relationship(deleteRule: .cascade) var subItem: [SubRelatedItem]?
-    init(name: String, type: String, objectDescription: String, creationDate: Date) {
-        self.id = UUID()
+    init(id: UUID = UUID(), name: String, type: String, objectDescription: String, creationDate: Date) {
+        self.id = id
         self.name = name
         self.type = type
         self.objectDescription = objectDescription

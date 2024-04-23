@@ -24,14 +24,15 @@ struct ItemDetailsView<VM>: View where VM: ItemDetailsViewModelProtocols {
                     Button(action: {
                         navState.path.append(item)
                     }, label: {
-                        ItemCell(item: Item(name: item.name,
+                        ItemCell(item: Item(id: item.id,
+                                            name: item.name,
                                             type: item.type,
                                             objectDescription: item.objectDescription,
                                             creationDate: item.creationDate),
                                  onEditTap: {
                             navState.path.append(item)
                         }, onDeleteTap: {
-                            viewModel.deleteItem(self.item, itemInRelation: item)
+                            viewModel.deleteItem(itemInRelation: item)
                         })
                     })
                 }.background(Color(UIColor.lightGray)).listRowSpacing(20).clipShape(RoundedRectangle(cornerRadius: 20))
@@ -47,7 +48,7 @@ struct ItemDetailsView<VM>: View where VM: ItemDetailsViewModelProtocols {
                         .presentationDragIndicator(.visible)
                     ItemsListSheet(items: viewModel.listOfItems ?? [],
                                    isShown: $showInputField) { items in
-                        viewModel.updateItem(oldItem: item, with: Array(items))
+                        viewModel.updateItem(with: Array(items))
                     } onCancelTap: {
                         viewModel.fetchItems()
                     }.onAppear(perform: {
